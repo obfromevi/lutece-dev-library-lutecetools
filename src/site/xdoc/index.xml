@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Library Lutece Tools</title>
+    </properties>
+    <body>
+        <section name="Library Lutece Tools">
+            <subsection name="Introduction">
+                <p>
+                    This library provides basic java objects for managing Lutece tools such as sites, components, dependency ...
+                </p>
+                <p>
+                    This library is used in all the lutece tools for creating POM, fetch maven dependencies...
+                </p>
+            </subsection>
+        </section>
+    </body>
+</document>

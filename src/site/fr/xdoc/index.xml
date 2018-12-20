@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <properties>
+        <title>Library Lutece Tools</title>
+    </properties>
+    <body>
+        <section name="Library Lutece Tools">
+            <subsection name="Introduction">
+                <p>
+                    Cette bibliothèque gère les objets utilisés au travers des différents utilitaire Lutece pour la génération des sites, des POM,
+                    la recherche des composants Lutece etc...
+                </p>
+            </subsection>
+        </section>
+    </body>
+</document>
