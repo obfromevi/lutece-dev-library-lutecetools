@@ -31,34 +31,35 @@
  *
  * License 1.0
  */
-package fr.paris.lutece.plugins.lutecetools.business;
+package fr.paris.lutece.plugins.lutecetools.util;
 
-/**
- * Dependency
- */
-public class Dependency extends AbstractComponent
+import fr.paris.lutece.plugins.lutecetools.business.dto.SiteBuilderConfDto;
+
+public interface ILuteceToolsRestClient
 {
-    private String _strGroupId;
+    /**
+     * Get the XML site pom from the SitePom rest endpoint
+     * 
+     * @param siteBuilderConfDto
+     *            The site builder conf dto with the site informations
+     * @return a XML representing the pom site.
+     */
+    String getSitePom( SiteBuilderConfDto siteBuilderConfDto );
 
     /**
-     * Returns the GroupId
+     * Get a JSON representing all the available artifact id from the components rest endpoint
      * 
-     * @return The GroupId
+     * @return a JSON representing all the available artifact id
      */
-    public String getGroupId( )
-    {
-        return _strGroupId;
-    }
+    String getJSONArtifactIdList( );
 
     /**
-     * Sets the GroupId
+     * Get a JSON representing a component based on given artifact id, from the components rest endpoint
      * 
-     * @param strGroupId
-     *            The GroupId
+     * @param strArtifactId
+     * @param bCache
+     * @return a JSON representing the component
      */
-    public void setGroupId( String strGroupId )
-    {
-        _strGroupId = strGroupId;
-    }
+    String getJSONComponent( String strArtifactId, Boolean bCache );
 
 }

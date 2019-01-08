@@ -35,9 +35,9 @@
     
     <dependencies>	
         <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>1.9.13</version>
+            <groupId>fr.paris.lutece.plugins</groupId>
+            <artifactId>library-httpaccess</artifactId>
+            <version>2.5.1</version>
         </dependency>
     </dependencies>
 <!--    <dependencies>

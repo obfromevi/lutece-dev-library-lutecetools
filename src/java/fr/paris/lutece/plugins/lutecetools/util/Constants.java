@@ -31,34 +31,22 @@
  *
  * License 1.0
  */
-package fr.paris.lutece.plugins.lutecetools.business;
+package fr.paris.lutece.plugins.lutecetools.util;
 
-/**
- * Dependency
- */
-public class Dependency extends AbstractComponent
+public class Constants
 {
-    private String _strGroupId;
+    // Rest PATH
+    public static final String PATH_POM_BUILDER = "pombuilder/";
+    public static final String PATH_SITE = "site/";
+    public static final String PATH_COMPONENT = "component";
+    public static final String PATH_ALL = "s";
 
-    /**
-     * Returns the GroupId
-     * 
-     * @return The GroupId
-     */
-    public String getGroupId( )
-    {
-        return _strGroupId;
-    }
+    // Constants
+    public static final String CONSTANT_SLASH = "/";
+    public static final String CONSTANT_JSON = "json";
 
-    /**
-     * Sets the GroupId
-     * 
-     * @param strGroupId
-     *            The GroupId
-     */
-    public void setGroupId( String strGroupId )
-    {
-        _strGroupId = strGroupId;
-    }
+    // Params
+    public static final String PARAM_FORMAT = "format";
+    public static final String PARAM_CACHE = "cache";
 
 }

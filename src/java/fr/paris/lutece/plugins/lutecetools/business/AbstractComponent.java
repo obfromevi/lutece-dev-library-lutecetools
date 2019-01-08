@@ -33,25 +33,26 @@
  */
 package fr.paris.lutece.plugins.lutecetools.business;
 
-import org.codehaus.jackson.annotate.JsonProperty;
-
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * Component
  */
 public abstract class AbstractComponent implements Comparable
 {
-    @JsonProperty("artifact_id")
+    @JsonProperty( "artifact_id" )
     private String _strArtifactId;
-    
+    @JsonProperty( "version" )
     private String _strVersion;
+    @JsonProperty( "component_type" )
+    private String _strComponentType;
 
     /**
      * Returns the ArtifactId
      * 
      * @return The ArtifactId
      */
-    @JsonProperty("artifact_id")
+    @JsonProperty( "artifact_id" )
     public String getArtifactId( )
     {
         return _strArtifactId;
@@ -63,7 +64,7 @@ public abstract class AbstractComponent implements Comparable
      * @param strArtifactId
      *            The ArtifactId
      */
-    @JsonProperty("artifact_id")
+    @JsonProperty( "artifact_id" )
     public void setArtifactId( String strArtifactId )
     {
         _strArtifactId = strArtifactId;
@@ -121,5 +122,26 @@ public abstract class AbstractComponent implements Comparable
     public int hashCode( )
     {
         return super.hashCode( );
+    }
+
+    /**
+     * Returns the ComponentType
+     * 
+     * @return The ComponentType
+     */
+    public String getComponentType( )
+    {
+        return _strComponentType;
+    }
+
+    /**
+     * Sets the ComponentType
+     * 
+     * @param strComponentType
+     *            The ComponentType
+     */
+    public void setComponentType( String strComponentType )
+    {
+        _strComponentType = strComponentType;
     }
 }

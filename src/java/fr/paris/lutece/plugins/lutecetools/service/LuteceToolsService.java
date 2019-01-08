@@ -31,34 +31,58 @@
  *
  * License 1.0
  */
-package fr.paris.lutece.plugins.lutecetools.business;
+package fr.paris.lutece.plugins.lutecetools.service;
 
-/**
- * Dependency
- */
-public class Dependency extends AbstractComponent
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import fr.paris.lutece.plugins.lutecetools.business.Component;
+import fr.paris.lutece.plugins.lutecetools.business.dto.SiteBuilderConfDto;
+import fr.paris.lutece.plugins.lutecetools.util.ILuteceToolsRestClient;
+import fr.paris.lutece.portal.service.util.AppLogService;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
+public class LuteceToolsService extends AbstractLuteceToolsService
 {
-    private String _strGroupId;
+    private ILuteceToolsRestClient _luteceToolsRestClient;
 
     /**
-     * Returns the GroupId
+     * Constructor for Spring context file
      * 
-     * @return The GroupId
+     * @param luteceToolsRestClient
+     *            The rest client for calling all the methods
      */
-    public String getGroupId( )
+    LuteceToolsService( ILuteceToolsRestClient luteceToolsRestClient )
     {
-        return _strGroupId;
+        _luteceToolsRestClient = luteceToolsRestClient;
     }
 
     /**
-     * Sets the GroupId
-     * 
-     * @param strGroupId
-     *            The GroupId
+     * {@inheritDoc}
      */
-    public void setGroupId( String strGroupId )
+    @Override
+    public String getSitePom( SiteBuilderConfDto siteBuilderConf )
     {
-        _strGroupId = strGroupId;
+        return _luteceToolsRestClient.getSitePom( siteBuilderConf );
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected String getJSONArtifactIdList( )
+    {
+        return _luteceToolsRestClient.getJSONArtifactIdList( );
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected String getJSONComponent( String strArtifactId, Boolean bCache )
+    {
+        return _luteceToolsRestClient.getJSONComponent( strArtifactId, bCache );
+    }
 }
