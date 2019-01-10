@@ -87,7 +87,7 @@ public interface ILuteceToolsService
      * @return The collection of the components, filled with all the availables informations
      */
     List<Component> getFullComponentList( String [ ] listArtifactId, Boolean bCache );
-    
+
     /**
      * Serealize given component to JSON string
      * 

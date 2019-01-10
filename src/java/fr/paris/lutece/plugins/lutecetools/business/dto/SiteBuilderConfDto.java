@@ -47,7 +47,7 @@ public class SiteBuilderConfDto
     private static final String DEFAULT_NAME = "My site";
     private static final String DEFAULT_VERSION = "1.0.0-SNAPSHOT";
     private static final String DEFAULT_TYPE = "lutece-site";
-    
+
     @JsonProperty( "site_name" )
     private String _strSiteName;
     @JsonProperty( "artifact_id" )
@@ -149,19 +149,23 @@ public class SiteBuilderConfDto
 
     /**
      * Get the group id of the site
+     * 
      * @return the group id of the site
      */
     @JsonProperty( "group_id" )
-    public String getGroupId() {
+    public String getGroupId( )
+    {
         return _strGroupId;
     }
 
     /**
      * Set the group id of the site
-     * @param strGroupId the group id of the site
+     * 
+     * @param strGroupId
+     *            the group id of the site
      */
     @JsonProperty( "group_id" )
-    public void setGroupId(String strGroupId) 
+    public void setGroupId( String strGroupId )
     {
         if ( strGroupId != null && !strGroupId.isEmpty( ) )
         {
@@ -171,19 +175,23 @@ public class SiteBuilderConfDto
 
     /**
      * Get the version of the site
+     * 
      * @return the version of the site
      */
     @JsonProperty( "version" )
-    public String getVersion() {
+    public String getVersion( )
+    {
         return _strVersion;
     }
 
     /**
      * Set the version of the site
-     * @param strVersion the version of the site
+     * 
+     * @param strVersion
+     *            the version of the site
      */
     @JsonProperty( "version" )
-    public void setVersion(String strVersion) 
+    public void setVersion( String strVersion )
     {
         if ( strVersion != null && !strVersion.isEmpty( ) )
         {
@@ -193,19 +201,23 @@ public class SiteBuilderConfDto
 
     /**
      * Get the component type
+     * 
      * @return the component type of the site
      */
     @JsonProperty( "component_type" )
-    public String getComponentType() {
+    public String getComponentType( )
+    {
         return _strComponentType;
     }
 
     /**
      * Set the component type of the site
-     * @param strComponentType the component type of the site
+     * 
+     * @param strComponentType
+     *            the component type of the site
      */
     @JsonProperty( "component_type" )
-    public void setComponentType(String strComponentType) 
+    public void setComponentType( String strComponentType )
     {
         if ( strComponentType != null && !strComponentType.isEmpty( ) )
         {
@@ -213,5 +225,4 @@ public class SiteBuilderConfDto
         }
     }
 
-    
 }

@@ -81,27 +81,25 @@ public class Component extends AbstractComponent implements Comparable
         _lLastUpdate = lLastUpdate;
     }
 
-    public String getCategory() 
+    public String getCategory( )
     {
         return _strCategory;
     }
 
-    public void setCategory( String strCategory ) 
+    public void setCategory( String strCategory )
     {
         _strCategory = strCategory;
     }
 
-    public String getDescription() 
+    public String getDescription( )
     {
         return _strDescription;
     }
 
-    public void setDescription(String _strDescription) 
+    public void setDescription( String _strDescription )
     {
         this._strDescription = _strDescription;
     }
-    
-    
 
     /**
      * Readable implementation
