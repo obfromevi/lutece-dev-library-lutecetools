@@ -42,19 +42,35 @@ import java.util.List;
  */
 public class SiteBuilderConfDto
 {
+    private static final String DEFAULT_ARTIFACT_ID = "site-mysite";
+    private static final String DEFAULT_GROUP_ID = "fr.paris.lutece";
+    private static final String DEFAULT_NAME = "My site";
+    private static final String DEFAULT_VERSION = "1.0.0-SNAPSHOT";
+    private static final String DEFAULT_TYPE = "lutece-site";
+    
     @JsonProperty( "site_name" )
     private String _strSiteName;
     @JsonProperty( "artifact_id" )
     private String _strArtifactId;
     @JsonProperty( "components" )
     private List<Component> _listComponents;
+    @JsonProperty( "group_id" )
+    private String _strGroupId;
+    @JsonProperty( "version" )
+    private String _strVersion;
+    @JsonProperty( "component_type" )
+    private String _strComponentType;
 
     /**
      * Default constructor
      */
     public SiteBuilderConfDto( )
     {
-
+        _strSiteName = DEFAULT_NAME;
+        _strArtifactId = DEFAULT_ARTIFACT_ID;
+        _strGroupId = DEFAULT_GROUP_ID;
+        _strVersion = DEFAULT_VERSION;
+        _strComponentType = DEFAULT_TYPE;
     }
 
     /**
@@ -77,7 +93,10 @@ public class SiteBuilderConfDto
     @JsonProperty( "site_name" )
     public void setSiteName( String strSiteName )
     {
-        _strSiteName = strSiteName;
+        if ( strSiteName != null && !strSiteName.isEmpty( ) )
+        {
+            _strSiteName = strSiteName;
+        }
     }
 
     /**
@@ -99,7 +118,10 @@ public class SiteBuilderConfDto
     @JsonProperty( "artifact_id" )
     public void setArtifactId( String strArtifactId )
     {
-        _strArtifactId = strArtifactId;
+        if ( strArtifactId != null && !strArtifactId.isEmpty( ) )
+        {
+            _strArtifactId = strArtifactId;
+        }
     }
 
     /**
@@ -125,4 +147,71 @@ public class SiteBuilderConfDto
         _listComponents = listComponents;
     }
 
+    /**
+     * Get the group id of the site
+     * @return the group id of the site
+     */
+    @JsonProperty( "group_id" )
+    public String getGroupId() {
+        return _strGroupId;
+    }
+
+    /**
+     * Set the group id of the site
+     * @param strGroupId the group id of the site
+     */
+    @JsonProperty( "group_id" )
+    public void setGroupId(String strGroupId) 
+    {
+        if ( strGroupId != null && !strGroupId.isEmpty( ) )
+        {
+            _strGroupId = strGroupId;
+        }
+    }
+
+    /**
+     * Get the version of the site
+     * @return the version of the site
+     */
+    @JsonProperty( "version" )
+    public String getVersion() {
+        return _strVersion;
+    }
+
+    /**
+     * Set the version of the site
+     * @param strVersion the version of the site
+     */
+    @JsonProperty( "version" )
+    public void setVersion(String strVersion) 
+    {
+        if ( strVersion != null && !strVersion.isEmpty( ) )
+        {
+            _strVersion = strVersion;
+        }
+    }
+
+    /**
+     * Get the component type
+     * @return the component type of the site
+     */
+    @JsonProperty( "component_type" )
+    public String getComponentType() {
+        return _strComponentType;
+    }
+
+    /**
+     * Set the component type of the site
+     * @param strComponentType the component type of the site
+     */
+    @JsonProperty( "component_type" )
+    public void setComponentType(String strComponentType) 
+    {
+        if ( strComponentType != null && !strComponentType.isEmpty( ) )
+        {
+            _strComponentType = strComponentType;
+        }
+    }
+
+    
 }

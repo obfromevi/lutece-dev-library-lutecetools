@@ -60,6 +60,8 @@ public class Component extends AbstractComponent implements Comparable
     public static final String IS_GIT_REPO = "isGitRepo";
 
     private long _lLastUpdate;
+    private String _strCategory;
+    private String _strDescription;
     private Map<String, Object> _mapAttributes = new HashMap<>( );
 
     /**
@@ -78,6 +80,28 @@ public class Component extends AbstractComponent implements Comparable
     {
         _lLastUpdate = lLastUpdate;
     }
+
+    public String getCategory() 
+    {
+        return _strCategory;
+    }
+
+    public void setCategory( String strCategory ) 
+    {
+        _strCategory = strCategory;
+    }
+
+    public String getDescription() 
+    {
+        return _strDescription;
+    }
+
+    public void setDescription(String _strDescription) 
+    {
+        this._strDescription = _strDescription;
+    }
+    
+    
 
     /**
      * Readable implementation
