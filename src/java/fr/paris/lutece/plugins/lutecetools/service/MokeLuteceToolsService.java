@@ -45,7 +45,7 @@ public class MokeLuteceToolsService extends AbstractLuteceToolsService
      * {@inheritDoc}
      */
     @Override
-    protected String getJSONArtifactIdList( )
+    public String getJSONArtifactIdList( )
     {
         return "{\"components\":[{\"artifact_id\":\"lutece-core\"}," + "{\"artifact_id\":\"gru-module-grusupply-database\"},"
                 + "{\"artifact_id\":\"gru-module-grusupply-elastic\"}," + "{\"artifact_id\":\"gru-plugin-grusupply\"},"

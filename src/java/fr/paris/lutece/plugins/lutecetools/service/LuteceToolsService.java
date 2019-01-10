@@ -64,7 +64,7 @@ public class LuteceToolsService extends AbstractLuteceToolsService
      * {@inheritDoc}
      */
     @Override
-    protected String getJSONArtifactIdList( )
+    public String getJSONArtifactIdList( )
     {
         return _luteceToolsRestClient.getJSONArtifactIdList( );
     }

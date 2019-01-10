@@ -63,7 +63,7 @@ public interface ILuteceToolsService
      * @return The collection of the components, filled with only the artifactId if loadFull is false, all the availables informations otherwise
      */
     Collection<Component> getComponentList( boolean bLoadFull, Boolean bCache );
-
+    
     /**
      * Get a fully loaded component based on its artifact id. Use cache = true for better perf; and cache = false for be sure to get the last informations about
      * the component
@@ -96,5 +96,10 @@ public interface ILuteceToolsService
      * @return the string representing the component in JSON format
      */
     String getComponentAsJsonString( Component component );
-
+    
+    /**
+     * Get the json of all the Lutece artifact Id
+     * @return the JSON with all the artifact id
+     */
+    String getJSONArtifactIdList( );
 }

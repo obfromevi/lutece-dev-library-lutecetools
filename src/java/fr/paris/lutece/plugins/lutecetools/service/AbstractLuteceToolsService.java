@@ -50,7 +50,8 @@ public abstract class AbstractLuteceToolsService implements ILuteceToolsService
     /**
      * {@inheritDoc}
      */
-    protected abstract String getJSONArtifactIdList( );
+    @Override
+    public abstract String getJSONArtifactIdList( );
 
     /**
      * {@inheritDoc}
