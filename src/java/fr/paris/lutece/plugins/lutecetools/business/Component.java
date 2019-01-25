@@ -39,6 +39,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Component
@@ -58,6 +59,14 @@ public class Component extends AbstractComponent implements Comparable
     public static final String SCM_DEVELOPER_CONNECTION = "scmDeveloperConnection";
     public static final String SNAPSHOT_SCM_URL = "snapshotScmUrl";
     public static final String IS_GIT_REPO = "isGitRepo";
+    public static final String HAS_SITE_INDEX = "hasSiteIndex" ;
+    public static final String HAS_KEYWORDS = "hasKeywords" ;
+    public static final String SITE_TITLE = "title";
+    public static final String SITE_KEYWORDS = "keywords";
+    public static final String SITE_INTRODUCTION = "introduction";
+    public static final String SITE_CONFIGURATION = "configuration";
+    public static final String SITE_USAGE = "usage";
+    public static final String SITE_IMGS = "images";
 
     private long _lLastUpdate;
     private String _strCategory;
@@ -241,6 +250,19 @@ public class Component extends AbstractComponent implements Comparable
      *            The attribute value
      */
     public void set( String strAttributeKey, List listValue )
+    {
+        _mapAttributes.put( strAttributeKey, listValue );
+    }
+    
+        /**
+     * Set an attribute value
+     *
+     * @param strAttributeKey
+     *            The attribute key
+     * @param listValue
+     *            The attribute value
+     */
+    public void set( String strAttributeKey, Set listValue )
     {
         _mapAttributes.put( strAttributeKey, listValue );
     }
