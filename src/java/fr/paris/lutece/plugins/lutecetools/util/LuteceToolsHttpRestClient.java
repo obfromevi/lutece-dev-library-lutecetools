@@ -92,7 +92,7 @@ public final class LuteceToolsHttpRestClient implements ILuteceToolsRestClient
     @Override
     public String getJSONArtifactIdList( )
     {
-        String strArtifactIdListEndPoint = _strLuteceToolsEndPoint + Constants.PATH_COMPONENT + Constants.CONSTANT_SLASH + Constants.PATH_ALL;
+        String strArtifactIdListEndPoint = _strLuteceToolsEndPoint + Constants.PATH_COMPONENT +  Constants.PATH_ALL;
         Map<String, String> mapParamRequest = new HashMap<>( );
         mapParamRequest.put( Constants.PARAM_FORMAT, Constants.CONSTANT_JSON );
         return _httpTransportProvider.doGet( strArtifactIdListEndPoint, mapParamRequest, null );
