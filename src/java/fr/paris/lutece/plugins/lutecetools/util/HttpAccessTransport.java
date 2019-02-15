@@ -35,10 +35,9 @@ package fr.paris.lutece.plugins.lutecetools.util;
 
 import fr.paris.lutece.util.httpaccess.HttpAccess;
 import fr.paris.lutece.util.httpaccess.HttpAccessException;
-import java.net.URISyntaxException;
+import fr.paris.lutece.util.url.UrlItem;
 import org.apache.commons.lang.StringUtils;
 
-import org.apache.http.client.utils.URIBuilder;
 
 import org.apache.log4j.Logger;
 
@@ -116,23 +115,23 @@ public class HttpAccessTransport extends AbstractHttpTransportProvider
 
         try
         {
-            URIBuilder uriBuilder = new URIBuilder( strEndPointUrl );
+            UrlItem url = new UrlItem( strEndPointUrl );
 
             if ( ( mapParams != null ) && !mapParams.isEmpty( ) )
             {
                 for ( String strParamKey : mapParams.keySet( ) )
                 {
-                    uriBuilder.addParameter( strParamKey, mapParams.get( strParamKey ) );
+                    url.addParameter( strParamKey, mapParams.get( strParamKey ) );
                 }
             }
 
-            strResponse = clientHttp.doGet( uriBuilder.toString( ), null, null, mapHeadersRequest );
+            strResponse = clientHttp.doGet( url.getUrl( ), null, null, mapHeadersRequest );
         }
-        catch( HttpAccessException | URISyntaxException e )
+        catch( HttpAccessException e )
         {
             handleException( e );
         }
-
+        
         return strResponse;
     }
 
