@@ -50,21 +50,22 @@ public class Component extends AbstractComponent implements Comparable
 
     public static final String CORE_VERSION = "coreVersion";
     public static final String PARENT_POM_VERSION = "parentPomVersion";
+    public static final String VERSION = "version";
     public static final String SNAPSHOT_VERSION = "snapshotVersion";
     public static final String SNAPSHOT_CORE_VERSION = "snapshotCoreVersion";
     public static final String SNAPSHOT_PARENT_POM_VERSION = "snapshotParentPomVersion";
     public static final String JIRA_KEY = "jiraKey";
-    public static final String SCM_URL = "scmUrl";
+    public static final String SCM_URL = "snapshotScmUrl";
     public static final String SCM_CONNECTION = "scmConnection";
     public static final String SCM_DEVELOPER_CONNECTION = "scmDeveloperConnection";
     public static final String SNAPSHOT_SCM_URL = "snapshotScmUrl";
     public static final String IS_GIT_REPO = "isGitRepo";
     public static final String HAS_SITE_INDEX = "hasSiteIndex" ;
     public static final String HAS_KEYWORDS = "hasKeywords" ;
-    public static final String SITE_TITLE = "title";
+    public static final String SITE_TITLE = "title_FR";
     public static final String SITE_KEYWORDS = "keywords";
-    public static final String SITE_INTRODUCTION = "introduction";
-    public static final String SITE_CONFIGURATION = "configuration";
+    public static final String SITE_INTRODUCTION = "introduction_FR";
+    public static final String SITE_CONFIGURATION = "configuration_FR";
     public static final String SITE_USAGE = "usage";
     public static final String SITE_IMGS = "images";
 
