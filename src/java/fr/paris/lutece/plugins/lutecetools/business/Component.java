@@ -35,6 +35,7 @@ package fr.paris.lutece.plugins.lutecetools.business;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.util.ArrayList;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -62,12 +63,13 @@ public class Component extends AbstractComponent implements Comparable
     public static final String IS_GIT_REPO = "isGitRepo";
     public static final String HAS_SITE_INDEX = "hasSiteIndex" ;
     public static final String HAS_KEYWORDS = "hasKeywords" ;
-    public static final String SITE_TITLE = "title_FR";
+    public static final String SITE_TITLE = "title";
     public static final String SITE_KEYWORDS = "keywords";
-    public static final String SITE_INTRODUCTION = "introduction_FR";
-    public static final String SITE_CONFIGURATION = "configuration_FR";
+    public static final String SITE_INTRODUCTION = "introduction";
+    public static final String SITE_CONFIGURATION = "configuration";
     public static final String SITE_USAGE = "usage";
     public static final String SITE_IMGS = "images";
+    public static final String DEPENDENCY_LIST = "luteceDependencyList";
 
     private long _lLastUpdate;
     private String _strCategory;
@@ -179,6 +181,18 @@ public class Component extends AbstractComponent implements Comparable
     }
 
     /**
+     * Get an attribute value arraylist
+     *
+     * @param strAttributeKey
+     *            The attribute key
+     * @return The value
+     */
+    public ArrayList<Object> getArrayList( String strAttributeKey )
+    {
+        return (ArrayList<Object>) _mapAttributes.get( strAttributeKey );
+    }
+
+    /**
      * Get an attribute value
      *
      * @param strAttributeKey
@@ -255,7 +269,7 @@ public class Component extends AbstractComponent implements Comparable
         _mapAttributes.put( strAttributeKey, listValue );
     }
     
-        /**
+    /**
      * Set an attribute value
      *
      * @param strAttributeKey
@@ -269,11 +283,11 @@ public class Component extends AbstractComponent implements Comparable
     }
 
     /**
-     * /** get Attributes
+     * get Attributes
      *
      * @return Attributes
      */
-    public Map getAttributes( )
+    public Map<String, Object> getAttributes( )
     {
         return _mapAttributes;
     }
