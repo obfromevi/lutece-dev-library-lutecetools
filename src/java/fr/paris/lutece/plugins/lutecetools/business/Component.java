@@ -70,6 +70,7 @@ public class Component extends AbstractComponent implements Comparable
     public static final String SITE_USAGE = "usage";
     public static final String SITE_IMGS = "images";
     public static final String DEPENDENCY_LIST = "luteceDependencyList";
+    public static final String RELEASE_DATE = "releaseDate";
 
     private long _lLastUpdate;
     private String _strCategory;
