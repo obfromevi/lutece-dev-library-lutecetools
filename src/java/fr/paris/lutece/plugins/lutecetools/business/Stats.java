@@ -42,6 +42,7 @@ public class Stats
     private int _nGithubCount;
     private int _nGithubOK;
     private int _nJiraOK;
+    private int _nRedmineOK;
     private int _nReadmeOK;
 
     /**
@@ -127,5 +128,22 @@ public class Stats
     public void setReadmeOK( int nReadmeOK )
     {
         _nReadmeOK = nReadmeOK;
+    }
+
+    /**
+     * @return the nRedmineOK
+     */
+    public int getRedmineOK( )
+    {
+        return _nRedmineOK;
+    }
+
+    /**
+     * @param nRedmineOK
+     *            the nRedmineOK to set
+     */
+    public void setRedmineOK( int nRedmineOK )
+    {
+        _nRedmineOK = nRedmineOK;
     }
 }
